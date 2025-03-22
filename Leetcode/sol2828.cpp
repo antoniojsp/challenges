@@ -1,9 +1,16 @@
-class Solution:
-    def isAcronym(self, words: List[str], s: str) -> bool:
 
-        acr = ""
 
-        for i in words:
-            acr += i[0]
+class Solution {
+public:
+    bool isAcronym(vector<string>& words, string s) {
 
-        return acr == s
+        string acr = "";
+
+        for (string i: words){
+            acr+= i[0];
+        }
+
+        return acr == s;
+
+    }
+};
