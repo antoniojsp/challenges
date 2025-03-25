@@ -9,14 +9,12 @@ class Solution:
 
     def findWords(self, words: List[str]) -> List[str]:
 
-        first_row = "qwertyuiop"
-        second_row = "asdfghjkl"
-        third_row = "zxcvbnm"
+        test = ["qwertyuiop", "asdfghjkl", "zxcvbnm"]
         result = []
         for word in words:
-            if self.helper(word ,first_row) \
-                    or self.helper(word ,second_row) \
-                    or self.helper(word ,third_row):
-                result.append(word)
+            for i in test:
+                if self.helper(word, i):
+                    result.append(word)
+                    break
 
         return result
