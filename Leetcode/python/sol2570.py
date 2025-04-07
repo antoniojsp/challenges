@@ -3,7 +3,7 @@ class Solution:
     def mergeArrays(self, nums1: List[List[int]], nums2: List[List[int]]) -> List[List[int]]:
 
         seen = {}
-        for i in nums 1 +nums2:
+        for i in nums1+nums2:
             seen[i[0]] = seen.get(i[0], 0) + i[1]
 
         result = [[i ,j] for i, j in seen.items()]
