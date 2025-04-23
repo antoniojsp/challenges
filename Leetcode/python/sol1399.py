@@ -4,9 +4,9 @@ class Solution:
     def sum_digits(self, nums :int) -> int:
         rslt = 0
         while 1 <= nums:
-            temp = num s %10
-            num s// =10
-            rsl t+ =temp
+            temp = nums %10
+            nums//=10
+            rslt+=temp
         return rslt
 
     def countLargestGroup(self, n: int) -> int:
