@@ -22,11 +22,9 @@ class Integer:
         return rslt
 
 class Solution:
-
-
-def sumBase(self, n: int, k: int) -> int:
-        value = Integer(n)
-        return value.add_digits_result(k)
+    def sumBase(self, n: int, k: int) -> int:
+            value = Integer(n)
+            return value.add_digits_result(k)
 
 
 
