@@ -23,8 +23,8 @@ class Integer:
 
 class Solution:
     def sumBase(self, n: int, k: int) -> int:
-            value = Integer(n)
-            return value.add_digits_result(k)
+        value = Integer(n)
+        return value.add_digits_result(k)
 
 
 
