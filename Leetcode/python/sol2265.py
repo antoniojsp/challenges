@@ -20,7 +20,7 @@ class Solution:
             if temp.right:
                 Q.append(temp.right)
 
-        average = int(sum a /count)
+        average = int(suma /count)
         return average
 
     def averageOfSubtree(self, root: TreeNode) -> int:
