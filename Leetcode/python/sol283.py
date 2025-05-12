@@ -10,7 +10,7 @@ class Solution:
         for i, j in enumerate(nums):
             if j != 0:
                 nums[pos] = j
-                po s+ =1
+                pos+=1
 
         for i in range(pos, len(nums)):
             nums[i] = 0
