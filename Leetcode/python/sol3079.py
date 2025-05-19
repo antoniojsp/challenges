@@ -5,13 +5,13 @@ class Solution:
         max_digit :int = 0
         count :int = 0
         while 0 < num:
-            max_digit = max(max_digit, nu m %10)
-            nu m// =10
-            coun t+ =1
+            max_digit = max(max_digit, num %10)
+            num//=10
+            count+=1
 
         rslt :int = 0
         for i in range(count):
-            rsl t+= max_digi t *(1 0* *i)
+            rslt+=max_digit *(10**i)
 
         return rslt
 
@@ -19,6 +19,6 @@ class Solution:
     def sumOfEncryptedInt(self, nums: List[int]) -> int:
         rslt :int = 0
         for i in nums:
-            rsl t+ =self.encrypt(i)
+            rslt+=self.encrypt(i)
 
         return rslt
