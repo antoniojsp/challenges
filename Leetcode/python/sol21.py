@@ -6,7 +6,6 @@
 #         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-
         first = list1
         second = list2
         rslt = ListNode(-1)
