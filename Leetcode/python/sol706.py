@@ -11,7 +11,7 @@ class MyHashMap:
         self.arr = [Node() for i in range(self.length)]
 
     def hash(self, key :int) -> int:
-        return ke y %self.length
+        return key%self.length
 
     def put(self, key: int, value: int) -> None:
         pos = self.hash(key)
