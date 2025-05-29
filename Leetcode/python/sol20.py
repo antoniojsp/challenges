@@ -8,11 +8,8 @@ class Solution:
         brackets = {']':'[', '}':'{', ')':'('}
         for i in s:
             if i in brackets:
-                if stack:
-                    if stack[-1] == brackets[i]:
-                        stack.pop()
-                    else:
-                        return False
+                if stack and stack[-1] == brackets[i]:
+                    stack.pop()
                 else:
                     return False
             else:
