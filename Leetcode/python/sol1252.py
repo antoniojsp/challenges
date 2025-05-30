@@ -16,6 +16,6 @@ class Solution:
         for row in matrix:
             for val in row:
                 if self.is_odd(val):
-                    rsl t+ =1
+                    rslt+=1
 
         return rslt
