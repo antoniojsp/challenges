@@ -39,5 +39,3 @@ class MedianFinder:
 # param_2 = obj.findMedian()
 
 
-
-
