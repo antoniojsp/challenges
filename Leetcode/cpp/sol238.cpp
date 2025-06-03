@@ -28,3 +28,32 @@ public:
         return result;
     }
 };
+
+
+
+class Solution {
+public:
+    void print(vector<int> arr){
+        for(int i: arr){
+            cout << i << " ";
+        }
+        cout << endl;
+    }
+
+    vector<int> productExceptSelf(vector<int>& nums) {
+        if (nums.size() <= 1){
+            return nums;
+        }
+        vector<int> result(nums.size(), 1);
+        for (int i = 1; i < nums.size(); ++i) { // calculate for the left
+            result[i] = result[i - 1] * nums[i - 1];
+        }
+
+        int from_the_right = 1;
+        for(int i = nums.size()-1; 0 <= i; i--){ // now calculate from the right.
+            result[i] *= from_the_right;
+            from_the_right *= nums[i];
+        }
+        return result;
+    }
+};
