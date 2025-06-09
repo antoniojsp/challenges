@@ -36,3 +36,24 @@ public:
         return result;
     }
 };
+
+
+class Solution {
+public:
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+
+        unordered_set<int> nums1_set(nums1.begin(), nums1.end());
+        unordered_set<int> nums2_set(nums2.begin(), nums2.end());
+        vector<int> result;
+        if(nums1_set.size() > nums2_set.size()){
+            swap(nums1_set, nums2_set);
+        }
+        for(auto i: nums1_set){
+            if(nums2_set.count(i)){
+                result.push_back(i);
+            }
+        }
+
+        return result;
+    }
+};
