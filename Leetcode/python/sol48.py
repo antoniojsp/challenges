@@ -8,7 +8,18 @@ class Solution:
         """
         for i in range(len(matrix)):
             for j in range(i, len(matrix[0])):
-                temp = matrix[i][j]
-                matrix[i][j] = matrix[j][i]
-                matrix[j][i] = temp
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+            matrix[i].reverse()
+
+
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        size = len(matrix)
+        for i in range(size):
+            for j in range(i+1):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        for i in range(size):
             matrix[i].reverse()
