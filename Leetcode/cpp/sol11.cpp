@@ -25,3 +25,33 @@ public:
         return max_area;
     }
 };
+
+
+
+
+
+class Solution {
+public:
+    int calculate_water_content(int left_height, int right_height, int distance){
+        int height = min(left_height, right_height);
+        return height * distance;
+    }
+
+    int maxArea(vector<int>& height) {
+        int left = 0;
+        int right = height.size() - 1;
+        int max_content = 0;
+        while (left < right){
+            int distance = right - left;
+            int current_water_content = calculate_water_content(height[left], height[right], distance);
+            max_content = max(max_content, current_water_content);
+            if (height[left] <= height[right]){
+                left++;
+            }else{
+                right--;
+            }
+        }
+
+        return max_content;
+    }
+};
