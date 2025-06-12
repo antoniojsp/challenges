@@ -17,8 +17,8 @@ class Solution:
                 res.append([])
 
             res[level].append(root.val)
-            helper(root.left, leve l +1)
-            helper(root.right, leve l +1)
+            helper(root.left, level +1)
+            helper(root.right, level +1)
         helper(root, 0)
         return res
 
