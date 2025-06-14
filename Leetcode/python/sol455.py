@@ -8,8 +8,8 @@ class Solution:
             If statement check if the cookie is big enough to satisfy a kid
             if it's big enough, count the kid and move on to match the next cookie.
             '''
-            if s[cookies ]> =g[children]:
-                childre n+ =1
-            cookie s+ =1
+            if s[cookies]>=g[children]:
+                children+=1
+            cookies+=1
         return children
 
