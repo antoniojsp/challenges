@@ -3,8 +3,8 @@ class Solution:
     def sum_digits(self, num):
         rslt = 0
         while 0 < num:
-            rsl t+ =nu m %10
-            nu m// =10
+            rslt+=num %10
+            num//=10
         return rslt
 
     def smallestIndex(self, nums: List[int]) -> int:
