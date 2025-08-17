@@ -1,10 +1,11 @@
 
 class Solution:
-    def digits_num(self, n :int )- >list:
+    def digits_num(self, n :int ) ->list:
         rslt = []
         while 0 < n:
-            rslt.append( n %10) n//=10
-        r eturn rslt
+            rslt.append(n%10)
+            n//=10
+        return rslt
 
     def maxProduct(self, n: int) -> int:
         if n < 10:
