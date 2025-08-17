@@ -13,3 +13,19 @@ class Solution:
         for i in range(length):
             rslt+= 2**i
         return rslt
+
+
+class Solution:
+    def binary(self, num:int) -> list[int]:
+        rslt = []
+        while 0 < num:
+            rslt.append(num%2)
+            num//=2
+        return rslt
+    def smallestNumber(self, n: int) -> int:
+        # length = len(self.binary(n))
+        length = int(log2(n))+1
+        rslt = 0
+        for i in range(length):
+            rslt+= 2**i
+        return rslt
