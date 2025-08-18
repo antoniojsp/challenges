@@ -4,8 +4,10 @@ class Solution:
         current = matrix[i][j]
         while i < len(matrix) and j < len(matrix[0]):
             if current != matrix[i][j]:
-                return False i+=1
-            j+=1 return True
+                return False
+            i+=1
+            j+=1
+        return True
 
     def isToeplitzMatrix(self, matrix: List[List[int]]) -> bool:
         for i in range(0, len(matrix[0])):
@@ -17,3 +19,13 @@ class Solution:
                 return False
 
         return True
+
+
+class Solution:
+    def isToeplitzMatrix(self, matrix: List[List[int]]) -> bool:
+        for i in range(len(matrix) - 1):
+            for j in range(len(matrix[0]) - 1):
+                if matrix[i][j] != matrix[i + 1][j + 1]:
+                    return False
+        return True
+
