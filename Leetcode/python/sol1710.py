@@ -14,3 +14,18 @@ class Solution:
 
 
 
+class Solution:
+    def maximumUnits(self, boxTypes: List[List[int]], truckSize: int) -> int:
+        boxTypes.sort(key=lambda x:x[1], reverse=True)
+        items = 0
+        boxes_curr = 0
+        for box, items_per_box in boxTypes:
+            if boxes_curr + box < truckSize:
+                boxes_curr += box
+                items += (box*items_per_box)
+            else:
+                space_left = truckSize - boxes_curr
+                items += items_per_box*space_left
+                break
+        return items
+
