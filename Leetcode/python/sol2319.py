@@ -32,3 +32,18 @@ class Solution:
 
     def checkXMatrix(self, grid: List[List[int]]) -> bool:
         return self.check_left(grid) and self.check_right(grid) and self.check_all(grid)
+
+
+
+class Solution:
+    def checkXMatrix(self, grid: List[List[int]]) -> bool:
+        n = len(grid)
+        for i in range(n):
+            for j in range(n):
+                if (i == j or i + j == n - 1): # diagonal
+                    if grid[i][j] == 0:
+                        return False
+                else:  # non diagonal
+                    if grid[i][j] != 0:
+                        return False
+        return True
