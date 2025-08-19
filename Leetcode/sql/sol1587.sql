@@ -1,4 +1,4 @@
-
+# https://leetcode.com/problems/bank-account-summary-ii/
 # Write your MySQL query statement below
 SELECT u.name as name, SUM(t.amount) as balance from Transactions AS t
 LEFT JOIN Users AS u ON t.account = u.account
