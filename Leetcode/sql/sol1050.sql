@@ -1,0 +1,9 @@
+
+# https://leetcode.com/problems/actors-and-directors-who-cooperated-at-least-three-times/submissions/1741422977/
+
+# Write your MySQL query statement below
+
+SELECT actor_id, director_id FROM ActorDirector
+GROUP BY actor_id, director_id
+HAVING Count(actor_id) >= 3
+
