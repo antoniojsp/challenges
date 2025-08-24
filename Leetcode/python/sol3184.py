@@ -5,6 +5,6 @@ class Solution:
         for i in range(len(hours)):
             for j in range( i +1, len(hours)):
                 if (hours[i] + hours[j] ) %24 == 0:
-                    coun t+ =1
+                    count+=1
 
         return count
