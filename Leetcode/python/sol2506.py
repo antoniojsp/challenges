@@ -8,6 +8,6 @@ class Solution:
             freq[i] = freq.get(i, 0 ) +1
         rslt = 0
         for val in freq.values():
-            rslt += (va l *(va l -1) )/ /2
+            rslt += (val*(val-1) )//2
 
         return rslt
