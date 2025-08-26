@@ -1,4 +1,3 @@
-#  https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -6,11 +5,19 @@
 #         self.next = next
 class Solution:
     def getDecimalValue(self, head: Optional[ListNode]) -> int:
-        binary = []
+        result:int = 0
         while head:
-            binary = [head.val] + binary
+            result = result * 2 + head.val
             head = head.next
-        result = [binary[i ] *( 2* *i) for i in range(len(binary))]
-        return sum(result)
+
+        return result
+
+
+        # binary = []
+        # while head:
+        #     binary = [head.val] + binary
+        #     head = head.next
+        # result = [binary[i]*(2**i) for i in range(len(binary))]
+        # return sum(result)
 
 
