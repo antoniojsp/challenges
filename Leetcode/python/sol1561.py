@@ -8,9 +8,9 @@ class Solution:
         Add up the lowest of each pair
         """
         piles.sort(reverse=True)
-        bob_lowest = len(piles )/ /3
+        bob_lowest = len(piles )//3
         suma = 0
         for i in range(1, len(piles) - bob_lowest, 2):
-            sum a+ =piles[i]
+            suma+=piles[i]
         return suma
 
