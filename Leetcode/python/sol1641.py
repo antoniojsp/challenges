@@ -11,12 +11,16 @@ class Solution:
                 table[i][j] = table[i][j - 1] - table[i - 1][j - 1]
         return sum(table[n])
 
-
 class Solution:
     def countVowelStrings(self, n: int) -> int:
         num_vowels = 5
         dp = [1]*num_vowels
-        for i in range(2, n+1):
+        for _ in range(2, n+1):
             for j in range(num_vowels-2, -1, -1):
                 dp[j] = dp[j+1]+dp[j]
         return sum(dp)
+
+
+
+
+
