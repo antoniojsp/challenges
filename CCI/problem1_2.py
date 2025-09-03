@@ -19,14 +19,33 @@ test_cases = [
 
 import unittest
 def is_permutation(str1:str, str2:str) -> bool:
+    """Check if str1 is a permutation of str2."""
     if len(str1) != len(str2):
         return False
     return sorted(str1) == sorted(str2)
 
+def is_permutation_no_sort(str1:str, str2:str) -> bool:
+    if len(str1) != len(str2):
+        return False
+
+    char_count = [0]*128
+    for i in str1:
+        char_count[ord(i)] += 1
+    for i in str2:
+        char_count[ord(i)] -= 1
+        if char_count[ord(i)] < 0:
+            return False
+    return  True
+
+
 class Test(unittest.TestCase):
     def test_is_permutation(self):
         for str1, str2, result in test_cases:
-            self.assertEqual(is_permutation(str1, str2) , result)
+            self.assertEqual(is_permutation(str1, str2), result)
+
+    def test_is_permutation_no_sort(self):
+        for str1, str2, result in test_cases:
+            self.assertEqual(is_permutation_no_sort(str1, str2) , result)
 
 if __name__ == '__main__':
     unittest.main()
