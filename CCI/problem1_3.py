@@ -34,19 +34,19 @@ test_cases = [
 
 
 def urlify(input_str, true_length) -> str:
+
     char_list = list(input_str)
     white_spaces = char_list[:true_length].count(' ')
     end = true_length + (white_spaces*2) -1# the end of the total
-    start_end = true_length - 1 # where string is starts
-    while 0 <= start_end:
-        if char_list[start_end] == ' ':
-            for i, rep in enumerate(reversed("%20")):
-                char_list[end-i] = rep
+    start_rewriting = true_length - 1 # where string is starts
+    while 0 <= start_rewriting:
+        if char_list[start_rewriting] == ' ':
+            char_list[end-2:end+1] = "%20"
             end-=3
         else:
-            char_list[end] = char_list[start_end]
+            char_list[end] = char_list[start_rewriting]
             end-=1
-        start_end -= 1
+        start_rewriting -= 1
 
     return "".join(char_list)
 
