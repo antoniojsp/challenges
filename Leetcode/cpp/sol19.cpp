@@ -27,3 +27,34 @@ class Solution:
         current.next = current.next.next
 
         return head
+
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* dummy = new ListNode(-1, head); // adding dummy node at the beginning
+        ListNode* first = dummy; //first node move n times forward
+        ListNode* second = dummy;  // once first position is found, second starts moving forward too.
+        for(int i = 0; i < n; i++){
+            first = first->next;
+        }
+        while(first->next){ // when first hit the of the list, second stop, delivering the node previous to the result
+            second = second->next;
+            first = first->next;
+        }
+        second->next = second->next->next; // node removed
+        ListNode* result = dummy->next;
+        delete dummy;
+        return result;
+    }
+};
