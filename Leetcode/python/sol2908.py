@@ -17,3 +17,6 @@ class Solution:
                 min_sum_triple = min(min_left + current + min_right, min_sum_triple)
         return -1 if min_sum_triple == float('inf') else min_sum_triple
 
+
+
+
