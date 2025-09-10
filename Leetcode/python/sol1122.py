@@ -4,9 +4,9 @@ class Solution:
         count1 = Counter(arr1)
         set1 = set(arr1)
         set2 = set(arr2)
-        ending = sorted(list(set 1 -set2))
+        ending = sorted(list(set1-set2))
 
         result = []
-        for i in arr 2 +ending:
+        for i in arr2+ending:
             result.extend([i ] *count1[i])
         return result
