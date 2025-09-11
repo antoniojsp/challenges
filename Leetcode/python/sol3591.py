@@ -5,12 +5,12 @@ class Solution:
             return False
         if num == 2:
             return True
-        if nu m %2 ==  0:
+        if num %2 ==  0:
             return False
 
         root = int(sqrt(num))
-        for i in range(3 ,roo t +1, 2):
-            if nu m %i == 0:
+        for i in range(3 ,root+1, 2):
+            if num %i == 0:
                 return False
         return True
 
