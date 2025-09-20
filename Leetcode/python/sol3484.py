@@ -1,4 +1,7 @@
-# https://leetcode.com/problems/design-spreadsheet/submissions/1776089655/
+#https://leetcode.com/problems/design-spreadsheet/
+from collections import defaultdict
+
+
 class Spreadsheet:
 
     def __init__(self, rows: int):
@@ -12,7 +15,7 @@ class Spreadsheet:
             del self.dictionary[cell]
 
     def getValue(self, formula: str) -> int:
-        x, y = formula.replace("=" ,"").split("+")
+        x, y = formula.replace("=", "").split("+")
         if x[0].isdigit():
             a = int(x)
         else:
@@ -22,7 +25,7 @@ class Spreadsheet:
             b = int(y)
         else:
             b = self.dictionary[y]
-        return a+ b
+        return a + b
 
 # Your Spreadsheet object will be instantiated and called as such:
 # obj = Spreadsheet(rows)
