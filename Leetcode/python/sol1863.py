@@ -12,7 +12,8 @@ class Solution:
     def subsetXORSum(self, nums: List[int]) -> int:
         sum_xor = 0
         for i in range(1, len(nums)+1):
-            for subset in combinations(nums, i):
+
+
                 sum_xor += self.xor_list(subset)
         print(self.xor_list([5,1,6]))
         return sum_xor
