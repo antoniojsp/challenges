@@ -8,12 +8,12 @@ class Solution:
         rslt = []
         count = 0
         for i, j in zip(A, B):
-            seen[ i -1 ]+ =1
-            if seen[ i -1] == 2:
-                coun t+ =1
-            seen[ j -1 ]+ =1
-            if seen[ j -1] == 2:
-                coun t+ =1
+            seen[i-1]+=1
+            if seen[i-1] == 2:
+                count+=1
+            seen[j-1 ]+=1
+            if seen[j-1] == 2:
+                count+=1
             rslt.append(count)
         return rslt
 
