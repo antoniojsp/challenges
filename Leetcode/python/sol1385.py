@@ -4,7 +4,7 @@ class Solution:
         invalid = 0
         for i in arr1:
             for j in arr2:
-                if abs( i -j) <= d:
-                    invali d+ =1
+                if abs(i -j) <= d:
+                    invalid+=1
                     break
         return len(arr1) - invalid # number of valids (tha thave at least one |arr1[i]-arr2[j]| <= d)
