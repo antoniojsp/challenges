@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="petals first green"></div>
+  <div class="petals second red vertical"></div>
+  <div class="petals third green"></div>
+  <div class="petals fourth red vertical"></div>
+</div>
+<style>
+
+  .second{left:167;top:47;}
+  .fourth{top:187;left:97;}
+  .first{left:62; top:82;}
+  .third{left:202; top:152;}
+  .vertical{transform:rotate(90deg);}
+
+  .green{background:#DA6C8E;}
+  .red{background:#81D2B0;}
+  .petals{
+    border-radius:25px;
+    position:absolute;
+    height:50px;
+    width:120px;
+  }
+  body{
+    background-color:#FFF8EA;
+  }
+  .container{position:relative;}
+</style>

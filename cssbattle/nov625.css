@@ -1,0 +1,45 @@
+
+
+<div class="container">
+    <div class="square first color"></div>
+    <div class="circle first color"></div>
+
+    <div class="segundo">
+      <div class="square second color"></div>
+      <div class="circle second color"></div>
+    </div>
+
+    <div class="square third color"></div>
+    <div class="circle third color"></div>
+</div>
+
+<style>
+  .segundo {position: absolute;
+            transform: scaleY(-1);
+            top:284;}
+  .third{left:252}
+  .second{left:142; }
+  .first{left:32;}
+  .square{
+    position:absolute;
+    top:107;
+    height:150px;
+    width:100px;
+  }
+  .circle{
+    position:absolute;
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    top:27;
+  }
+  .container{
+    position:relative;
+  }
+  body{
+      background-color:#556D7F;
+  }
+  .color{
+    background-color:#EBCB58;
+  }
+</style>
