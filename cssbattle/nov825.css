@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="form top black"></div>
+  <div class="circle left"></div>
+  <div class="nose l crema"></div>
+  <div class="nose r crema"></div>
+  <div class="circle right"></div>
+  <div class="form bottom black"></div>
+</div>
+<style>
+  :root{
+    --diameter:30px;
+  }
+  .l{
+    left:172px;
+  }
+  .r{
+    left:202px;
+  }
+  .nose{
+    position:absolute;
+    height:20px;
+    width:10px;
+    top:110px;
+  }
+  .right{left:202px;}
+  .left{left:132px;}
+
+  .circle{
+    height:var(--diameter);
+    width:var(--diameter);
+    border-radius:50%;
+    position:absolute;
+    top:87px;
+    border:10px solid #FFE5AC;
+  }
+  .form{
+    left:132px;
+    height:50px;
+    width:120px;
+    border-radius:50px;
+    position: absolute;
+  }
+  .top{
+    top:77px;
+  }
+  .bottom{
+    top:157px;
+  }
+  .container{
+    position: relative;
+  }
+  body{
+    background-color:#FFE5AC;
+  }
+  .black{
+    background-color:#313131;
+  }
+  .crema{
+    background-color:#FFE5AC;
+  }
+</style>
+
