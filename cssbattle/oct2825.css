@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="barra yellow"></div>
+  <div class="circle yellow"></div>
+  <div class="circle2 pink"></div>
+  <div class="barra2 yellow"></div>
+</div>
+<style>
+  .container{
+    margin:-8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    position:relative;
+  }
+  .barra,.barra2, .circle2, .circle{
+    position:absolute;
+  }
+  .barra2{
+    height:70px;
+    width:26px;
+  }
+  .barra{
+    height:80px;
+    width:260px;
+  }
+  .circle2{
+    height:70px;
+    width:70px;
+    border-radius:50%;
+  }
+  .circle{
+    height:160px;
+    width:160px;
+    border-radius:50%;
+  }
+
+  .pink{background-color:#C06C88}
+  .yellow{background-color:#F4DA64;}
+  body{background-color:#C06C88;}
+</style>
+
