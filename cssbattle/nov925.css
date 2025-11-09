@@ -1,0 +1,46 @@
+
+
+<div class="container">
+    <div class="triangle left"></div>
+    <div class="rombo"></div>
+    <div class="triangle right"></div>
+</div>
+
+<style>
+  :root{
+    --side:100px;
+    --triangle-side:137px;
+  }
+  .rombo{
+    height:var(--side);
+    width:var(--side);
+    background-color:#394257;
+    transform:rotate(45deg);
+    top:92px;
+    left:142px;
+  }
+  .triangle{
+    height:0;
+    width:0;
+    border-top: var(--triangle-side) solid transparent;
+    border-bottom: var(--triangle-side) solid transparent;
+    border-right: var(--triangle-side)solid #D9D9D9;
+    z-index: 1;
+    top:5px;
+  }
+  .right{
+    transform:rotate(180deg);
+    left:232px;
+  }
+  .left{
+    left:15px
+  }
+  .rombo, .triangle{
+    position:absolute;
+  }
+  .container{
+    position: relative;
+    height:100vh;
+  }
+  body{background-color: #6F9893;}
+</style>
