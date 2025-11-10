@@ -1,0 +1,73 @@
+//https://cssbattle.dev/play/IYhmS4eOH9V65VfprhH0
+
+
+<div class="container">
+  <div class="banner top">
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+  </div>
+
+  <div class="centre">
+    <div class="circle color"></div>
+    <div class="circle color"></div>
+  </div>
+
+  <div class="banner bottom">
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+    <div class="barra color"></div>
+  </div>
+</div>
+
+<style>
+  .centre {
+    position: absolute;
+    display: flex;
+    left: 132px;
+    top: 127px;
+  }
+
+  .circle {
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    border-radius: 50%;
+  }
+
+  .top {
+    top: 37px;
+    left: 42px;
+  }
+
+  .bottom {
+    top: 167px;
+    left: 42px;
+  }
+
+  .banner {
+    display: flex;
+    position: absolute;
+  }
+
+  .barra {
+    height: 60px;
+    width: 30px;
+    margin: 10px;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+  }
+
+  .color { background-color: #CDC5A5; }
+
+  body { background-color: #984E77; }
+</style>
