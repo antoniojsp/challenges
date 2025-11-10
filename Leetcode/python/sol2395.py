@@ -1,0 +1,13 @@
+
+
+# https://leetcode.com/problems/find-subarrays-with-equal-sum/description/
+
+class Solution:
+    def findSubarrays(self, nums: List[int]) -> bool:
+        seen = set()
+        for i in range(len(nums)-1):
+            suma = nums[i]+nums[i+1]
+            if suma in seen:
+                return True
+            seen.add(suma)
+        return False
