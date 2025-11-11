@@ -1,0 +1,68 @@
+
+// https://cssbattle.dev/play/81oY2i4INFJNZIYBRkuT
+
+<div class="container">
+    <div id="cover" class="barra"></div>-->
+    <div class="barra top"></div>
+  <div class="group">
+    <div class="circle"></div>
+    <div class="barra bottom"></div>
+  </div>
+</div>
+
+<style>
+  :root{
+    --circ: 101px;
+  }
+  .group{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+  .barra{
+    height:43px;
+    width:259px;
+    background-color:#A4215D;
+  }
+  .top{
+    top:60px;
+    height:40px;
+
+    width:259px;
+    z-index:2;
+    position:relative;
+  }
+  .bottom{
+    width:299px;
+    height:40px;
+  }
+
+  .circle{
+    top:26px;
+    height:var(--circ);
+    width:var(--circ);
+    border:40px solid #F3EAD2;
+    border-radius:50%;
+    z-index:1;
+  }
+ #cover{
+    position:absolute;
+    top:36;
+    z-index:3;
+    background-color:#050044;
+  }
+  body{
+    margin-top:-29px;
+    background-color:#050044;
+  }
+
+  .container{
+    display:flex;
+    flex-direction:column;
+    gap:0px;
+    position:relative;
+    align-items:center;
+  }
+</style>
+
