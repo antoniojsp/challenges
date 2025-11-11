@@ -4,9 +4,9 @@ class Solution:
         left = 0
         right = len(nums) - 1
         while left < right and nums[left] !=  value:
-            lef t+ =1
+            left+=1
         while left < right and nums[right] != value:
-            righ t- =1
+            right-=1
 
         return right - left + 1
 
