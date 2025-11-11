@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THE HYDRA PROTOCOL: NODE 7</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #00ff00; /* Electric green text */
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            text-transform: uppercase;
+        }
+
+
+        h1 {
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 5px;
+            font-size: 1.5em;
+            letter-spacing: 5px;
+        }
+
+
+        .terminal-box {
+            background-color: #0d0d0d;
+            border: 1px solid #00ff00;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+
+        textarea, select {
+            width: 100%;
+            height: 150px;
+            background-color: #000000;
+            color: #ff00ff; /* Subtle purple/magenta for input contrast */
+            border: 1px solid #00ff00;
+            padding: 10px;
+            font-family: monospace;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            resize: none;
+        }
+
+
+        button {
+            background-color: #000000;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 8px 15px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: all 0.1s;
+        }
+
+
+        button:hover {
+            background-color: #00ff00;
+            color: #000000;
+        }
+
+
+        .alert-message {
+            color: #ff0000; /* Red warning text */
+            margin-top: 30px;
+            text-align: center;
+            font-weight: bold;
+            animation: flicker 1.5s infinite alternate; /* Simulation of glitch/flicker */
+        }
+
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.95; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="alert-message">
+        // WARNING: SESSION 493 LOGGED // DO NOT SHARE SOURCE //
+    </div>
+
+
+    <h1>THE HYDRA PROTOCOL : KEYING INTERFACE</h1>
+
+
+    <div class="terminal-box">
+        <label for="mode">SELECT OPERATION MODE:</label>
+        <select id="mode">
+            <option value="encrypt">ENCRYPT_BUFFER (OUT)</option>
+            <option value="decrypt">DECRYPT_DATA (IN)</option>
+        </select>
+
+        <br><br>
+
+
+        <label for="inputCipher">INPUT STREAM [RAW DATA]:</label>
+        <textarea id="inputCipher" placeholder="PASTE DATA HERE..."></textarea>
+
+
+        <label for="outputDecipher">OUTPUT STREAM [DECODED/ENCODED]:</label>
+        <textarea id="outputDecipher" readonly placeholder="OPERATION RESULT WILL APPEAR HERE..."></textarea>
+
+
+        <button onclick="processData()">EXECUTE PROCEDURE</button>
+        <button onclick="clearFields()">RESET TERMINAL</button>
+    </div>
+
+
+    <script>
+        // Placeholder JS for functionality hook
+        function processData() {
+            const input = document.getElementById('inputCipher').value;
+            const mode = document.getElementById('mode').value;
+            const outputField = document.getElementById('outputDecipher');
+
+            if (mode === 'encrypt') {
+                outputField.value = "ENCRYPTING: Processing input using AES-128 'shadow' key...";
+            } else {
+                outputField.value = "DECRYPTING: Attempting to resolve signature hash...";
+            }
+            // Real encryption/decryption logic would follow here
+        }
+
+
+        function clearFields() {
+            document.getElementById('inputCipher').value = '';
+            document.getElementById('outputDecipher').value = '';
+        }
+    </script>
+
+
+</body>
+</html>
