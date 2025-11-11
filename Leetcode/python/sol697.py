@@ -1,17 +1,23 @@
 # https://leetcode.com/problems/degree-of-an-array/
 class Solution:
-    def find_range_length(self, nums :list, value :int) -> int:
-        left = 0
-        right = len(nums) - 1
-        while left < right and nums[left] !=  value:
-            left+=1
-        while left < right and nums[right] != value:
-            right-=1
-
-        return right - left + 1
-
     def findShortestSubArray(self, nums: List[int]) -> int:
-        count = Counter(nums) # count
-        max_freq = max(count.values()) # find max frequency value
-        indexes = [key for key, val in count.items() if val == max_freq] # get keys that repeat the most
-        return min(self.find_range_length(nums, i) for i in indexes)
+        first_left = {}
+        first_right = {}
+        count = {}
+        max_freq = float("-inf")
+        for i in range(len(nums)):
+            if nums[i] not in first_left:
+                first_left[nums[i]] = i
+            first_right[nums[i]] = i
+            count[nums[i]] = count.get(nums[i], 0) + 1
+            max_freq = max(max_freq, count[nums[i]])
+
+        max_freq_key = [key for key, val in count.items() if val == max_freq]
+        min_distance = float('inf')
+        for i in max_freq_key:
+            min_distance = min(min_distance, first_right[i] - first_left[i] + 1)
+        return min_distance
+
+
+
+
