@@ -1,7 +1,6 @@
 
 # https://leetcode.com/problems/maximum-number-of-balloons/description/
 
-
 class Solution:
     def maxNumberOfBalloons(self, text: str) -> int:
         store = {i:0 for i in "balloon"}
