@@ -4,12 +4,12 @@ class Solution:
         abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         result = []
         while 0 < columnNumber:
-            remainder = columnNumbe r %26
-            result.append(abc[remainde r -1])
+            remainder = columnNumber %26
+            result.append(abc[remainder -1])
             if remainder == 0:
-                columnNumber = (columnNumber - 1 )/ /26
+                columnNumber = (columnNumber - 1 )//26
             else:
-                columnNumbe r// =26
+                columnNumber//=26
         result.reverse()
         return "".join(result)
 
