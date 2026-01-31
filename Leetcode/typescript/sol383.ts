@@ -1,8 +1,9 @@
 
 // https://leetcode.com/problems/ransom-note/description/
 
-const counter = (word) => {
-    const count = new Map<string, number>();
+
+const counter = (word:string)=> {
+    const count:Map<string, number> = new Map<string, number>();
     for(const ch of word){
         count.set(ch, (count.get(ch) ?? 0)+1)
     }
@@ -10,9 +11,9 @@ const counter = (word) => {
 }
 
 function canConstruct(ransomNote: string, magazine: string): boolean {
-    const target = counter(ransomNote)
-    const source = counter(magazine)
-    for(const [ch, freq] of target.entries()){
+    const target:Map<string, number>  = counter(ransomNote)
+    const source:Map<string, number>  = counter(magazine)
+    for(const ch of target.keys()){
         if(!source.has(ch) || target.get(ch) > source.get(ch)){
             return false;
         }
