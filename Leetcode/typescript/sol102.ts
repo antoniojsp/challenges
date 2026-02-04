@@ -19,30 +19,51 @@ function levelOrder(root: TreeNode | null): number[][] {
     if(!root){
         return [];
     }
-    const Q:[TreeNode | null, number][] = [[root, 0]];
-    const mapa = new Map();
-
-    while(Q.length > 0){
-        const popped: [TreeNode | null, number] | undefined = Q.shift();
-        if(!popped){
-            continue;
+    const levels:Map<number, number[]> = new Map();
+    const helper = (node, level) =>{
+        if(!node){
+            return
         }
+        if(!(levels.has(level))){
 
-        const [node, level]: [TreeNode | null, number] = popped;
-        if(node != null){
-            if(!(level in mapa)){
-                mapa[level] = [];
-            }
-            mapa[level].push(node.val)
-
-            if(node.left){
-                Q.push([node.left, level + 1])
-            }
-            if(node.right){
-                Q.push([node.right, level + 1])
-            }
+            levels.set(level, [])
         }
+        levels.get(level).push(node.val)
+        helper(node.left, level+1)
+        helper(node.right, level+1)
     }
 
-    return Object.values(mapa);
+    helper(root, 0)
+    return Array.from(levels.values())
+
+
+    // if(!root){
+    //     return [];
+    // }
+    // const Q:[TreeNode | null, number][] = [[root, 0]];
+    // const mapa = new Map();
+
+    // while(Q.length > 0){
+    //     const popped: [TreeNode | null, number] | undefined = Q.shift();
+    //     if(!popped){
+    //         continue;
+    //     }
+
+    //     const [node, level]: [TreeNode | null, number] = popped;
+    //     if(node != null){
+    //         if(!(level in mapa)){
+    //             mapa[level] = [];
+    //         }
+    //         mapa[level].push(node.val)
+
+    //         if(node.left){
+    //             Q.push([node.left, level + 1])
+    //         }
+    //         if(node.right){
+    //             Q.push([node.right, level + 1])
+    //         }
+    //     }
+    // }
+
+    // return Object.values(mapa);
 };
