@@ -28,9 +28,8 @@ function levelOrder(root: TreeNode | null): number[][] {
             continue;
         }
 
-        const [node, level] = popped;
+        const [node, level]: [TreeNode | null, number] = popped;
         if(node != null){
-            console.log(node.val, level)
             if(!(level in mapa)){
                 mapa[level] = [];
             }
