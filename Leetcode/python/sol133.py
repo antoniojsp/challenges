@@ -26,7 +26,6 @@ class Solution:
                     temp = Node(val=i.val ,neighbors = [])
                     Q.append([i, temp])
 
-
         return
 
 
