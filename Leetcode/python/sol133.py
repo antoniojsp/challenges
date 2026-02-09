@@ -12,20 +12,16 @@ class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
         if not node:
             return None
-        node_copy = Node(val=node.val, neighbors = [])
-        print(node_copy.val)
-
-        Q = deque([node, node_copy])
+        Q = deque([node])
         seen = set()
+
         while Q:
-            node, cnode = Q.popleft()
-            print(node.val)
-            if node and node not in seen:
+            node = Q.popleft()
+            if node in seen:
+                continue
+            if node:
+                print(node.val)
                 seen.add(node)
                 for i in node.neighbors:
-                    temp = Node(val=i.val ,neighbors = [])
-                    Q.append([i, temp])
-
-        return
-
+                    Q.append(i)
 
