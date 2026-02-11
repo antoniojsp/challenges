@@ -14,14 +14,21 @@ class Solution:
             return None
         Q = deque([node])
         seen = set()
+        clone_map = defaultdict(list)
+        # result = Node(val=)
 
         while Q:
             node = Q.popleft()
             if node in seen:
                 continue
             if node:
-                print(node.val)
+                # print(node.val)
                 seen.add(node)
                 for i in node.neighbors:
+                    clone_map[node.val].append(i.val)
                     Q.append(i)
+
+
+        print(clone_map)
+
 
