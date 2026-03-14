@@ -18,3 +18,18 @@ class Solution:
             if node.right:
                 Q.append((node.right, node.val, max_val))
         return True
+
+
+
+class Solution:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        def helper(node, min, max):
+            if not node:
+                return True
+            if (min is not None) and (node.val <= min) \
+                or \
+               (max is not None) and (node.val >= max):
+                return False
+
+            return helper(node.left, min, node.val) and helper(node.right, node.val, max)
+        return helper(root, None, None)
