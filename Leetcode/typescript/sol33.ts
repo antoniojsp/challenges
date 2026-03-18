@@ -1,7 +1,5 @@
 
 // https://leetcode.com/problems/search-in-rotated-sorted-array/description/
-
-
 function search(nums: number[], target: number): number {
     let left:number = 0;
     let right:number = nums.length-1;
