@@ -21,7 +21,7 @@ function countOppositeParity(nums: number[]): number[] {
 
 
 
-const countEvenOdd = (nums) => {
+const countEvenOdd = (nums:number[]) => {
     let odd = 0;
     let even = 0;
     for(const num  of nums){
