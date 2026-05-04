@@ -18,3 +18,33 @@ function countOppositeParity(nums: number[]): number[] {
 
     return result;
 };
+
+
+
+const countEvenOdd = (nums) => {
+    let odd = 0;
+    let even = 0;
+    for(const num  of nums){
+        if(num%2 == 0){
+            even++;
+        }else{
+            odd++;
+        }
+    }
+    return [even, odd]
+}
+
+function countOppositeParity1(nums: number[]): number[] {
+    let [even, odd] = countEvenOdd(nums);
+    const result:number[] = []
+    for(const num of nums){
+        if(num%2 === 0){
+            even--;
+            result.push(odd)
+        }else{
+            odd--;
+            result.push(even)
+        }
+    }
+    return result;
+};
