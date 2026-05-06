@@ -35,7 +35,6 @@ function rotateRight(head: ListNode | null, k: number): ListNode | null {
     }
 
     const new_start = len - steps - 1;
-    console.log(new_start);
     let temp = head!;
     for(let i = 0; i < new_start; i++){
         temp = temp.next!;
