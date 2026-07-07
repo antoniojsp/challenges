@@ -1,0 +1,105 @@
+That's an excellent idea. Reviewing a curated list is much more effective than solving random problems. Since you've already completed Easy and Medium problems, your goal should be to **master the core patterns**.
+
+Here's a list of around **50 must-know LeetCode problems**.
+
+### Arrays & Strings
+
+1. Two Sum //
+2. Best Time to Buy and Sell Stock
+3. Contains Duplicate
+4. Product of Array Except Self
+5. Maximum Subarray
+6. Merge Sorted Array
+7. Remove Duplicates from Sorted Array
+8. Rotate Array
+
+### Hash Maps & Sets
+
+9. Valid Anagram
+10. Group Anagrams
+11. Top K Frequent Elements
+12. Longest Consecutive Sequence
+13. Ransom Note
+
+### Two Pointers
+
+14. Valid Palindrome
+15. Two Sum II
+16. 3Sum
+17. Container With Most Water
+18. Move Zeroes
+
+### Sliding Window
+
+19. Longest Substring Without Repeating Characters
+20. Minimum Size Subarray Sum
+21. Permutation in String
+22. Longest Repeating Character Replacement
+
+### Stack
+
+23. Valid Parentheses
+24. Min Stack
+25. Daily Temperatures
+26. Evaluate Reverse Polish Notation
+
+### Binary Search
+
+27. Binary Search
+28. Search Insert Position
+29. Search in Rotated Sorted Array
+30. Find Minimum in Rotated Sorted Array
+
+### Linked Lists
+
+31. Reverse Linked List
+32. Merge Two Sorted Lists
+33. Linked List Cycle
+34. Remove Nth Node From End of List
+35. Reorder List
+
+### Trees
+
+36. Maximum Depth of Binary Tree
+37. Same Tree
+38. Invert Binary Tree
+39. Binary Tree Level Order Traversal
+40. Validate Binary Search Tree
+41. Lowest Common Ancestor of a BST
+42. Diameter of Binary Tree
+
+### Graphs
+
+43. Number of Islands
+44. Clone Graph
+45. Flood Fill
+
+### Heap / Priority Queue
+
+46. Kth Largest Element in an Array
+47. Last Stone Weight
+
+### Intervals
+
+48. Merge Intervals
+49. Insert Interval
+
+### Dynamic Programming
+
+50. Climbing Stairs
+51. House Robber
+52. Coin Change
+
+## How to review them
+
+For each problem, make sure you can answer:
+
+* What pattern does it use?
+* What is the time complexity?
+* What is the space complexity?
+* Could I explain my solution to an interviewer?
+* Could I solve it again without looking at notes?
+
+If you can confidently solve and explain these problems, you'll have covered the patterns that appear in a large percentage of entry-level software engineering interviews.
+
+After you're comfortable with this list, the next step is to add about **20–30 carefully chosen Medium problems** that are commonly asked in interviews to deepen your understanding.
