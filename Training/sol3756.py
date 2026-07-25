@@ -8,7 +8,7 @@ class Solution:
         num_list = []
         for i in s:
             if i != "0":
-                numbe r= (numbe r *10) + int(i)
+                number= (number *10) + int(i)
             num_list.append(str(number))
         print(suma)
         print(num_list)
