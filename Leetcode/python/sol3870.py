@@ -10,3 +10,11 @@ class Solution:
         #         count+=1
         # return count
         return 0 if n < 1000 else n - 1000 + 1
+
+
+class Solution:
+    def countCommas(self, n: int) -> int:
+        if n < 1000:
+            return 0
+        return n - 1000 + 1
+
