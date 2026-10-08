@@ -1,12 +1,27 @@
 # https://leetcode.com/problems/limit-occurrences-in-sorted-array/description/
 
 class Solution:
-    def limitOccurrences(self, nums: list[int], k: int) -> list[int]:
-        count = Counter(nums)
+    def combinationSum(self, candidates: list[int], target: int) -> list[list[int]]:
         res = []
-        for val, freq in count.items():
-            if freq > k:
-                res.extend([val for i in range(k)])
-            else:
-                res.extend([val for i in range(freq)])
+        sequence = []
+
+        def dfs(start, curr):
+            if curr == 0:
+                res.append(sequence[:])
+                return
+
+            if curr < 0:
+                return
+
+            for i in range(start, len(candidates)):
+
+                candidate = candidates[i]
+                if candidate > curr:
+                    break
+                sequence.append(candidate)
+                dfs(i, curr - candidate)
+                sequence.pop()
+
+        dfs(0, target)
         return res
+
